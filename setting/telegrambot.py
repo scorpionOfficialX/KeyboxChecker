@@ -32,7 +32,7 @@ class TelegramBot(BaseSettings):
         if self.proxy_address:
             logger.success(f"TelegramBot proxy was set to {self.proxy_address}")
         if self.token is None:
-            logger.info("\n🍀Check:Telegrambot token is empty")
+            logger.info("\n❌Check:Telegram bot token is empty")
         if self.bot_id is None and self.token:
             try:
                 from telebot import TeleBot
@@ -52,14 +52,14 @@ class TelegramBot(BaseSettings):
                 self.bot_link = f"https://t.me/{self.bot_username}"
             except requests.exceptions.ConnectTimeout:
                 logger.error(
-                    "\n🍀TelegramBot Connect Error --error ConnectTimeout, Please Check Your Network To Telegram"
+                    "\n💔TelegramBot Connect Error --error ConnectTimeout, Please Check Your Network To Telegram"
                 )
                 raise requests.exceptions.ConnectTimeout
             except Exception as e:
-                logger.error(f"\n🍀TelegramBot Connect Error --error {e}")
+                logger.error(f"\n💔TelegramBot Connect Error --error {e}")
             else:
                 logger.success(
-                    f"🍀TelegramBot Init Connection Success --bot_name {self.bot_username} --bot_id {self.bot_id}"
+                    f"✅TelegramBot Init Connection Success --bot_name {self.bot_username} --bot_id {self.bot_id}"
                 )
         return self
 
