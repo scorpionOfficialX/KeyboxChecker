@@ -1,7 +1,5 @@
 # Keybox Checker w
-[![actions](https://github.com/dnascorpionOfficialX/KeyboxChecker/actions/workflows/ruff.yml/badge.svg)](https://github.com/dnascorpionOfficialX/KeyboxChecker/actions/workflows/ruff.yaml)
-[![actions](https://github.com/dnascorpionOfficialX/KeyboxChecker/actions/workflows/docker-ci.yml/badge.svg)](https://github.com/dnascorpionOfficialX/KeyboxChecker/actions/workflows/docker-ci.yaml)
-Deployment
+
 
 Download the code.
 ```shell
